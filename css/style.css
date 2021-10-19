@@ -43,7 +43,7 @@ body{
     margin-left: 40px;
 }
 
-.audio,
+/* .audio, */
 .audio header{
     width: calc(100vw - 40px);
 }
@@ -65,19 +65,21 @@ body{
 .recently,
 .john-doe,
 .artisti{
-    display: flex;
+    /* display: flex; */
     padding: 20px 15px;
 }
 
 .recently{
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    display: table;
+    content: "";
+    clear: both;
 }
 
 .musica{
-    margin: 5px;
-    width: 38vw;
-    height: 38vw;
-    
+    width: 41vw;
+    height: 41vw; 
+    float: left; 
 }
 
 /**** sezione footer ****/
@@ -93,7 +95,7 @@ body>footer{
 
 
 
-@media screen and (min-width: 420px){
+@media screen and (min-width: 576px){
     
     .menù{
         width: 150px;
@@ -103,22 +105,40 @@ body>footer{
         margin-left: 150px;
     }
 
-    .audio,
+    .recently{
+        width: calc(100vw - 150px);
+    }
+
+    /* .audio, */
     .audio header{
         width: calc(100vw - 150px);
+    }
+
+    .musica{
+        width: 32vw;
+        height: 32vw;  
+    }
+
+}
+
+
+@media screen and (min-width: 768px){
+
+    .musica{
+        width: 19vw;
+        height: 19vw;  
     }
 
 }
 
 
 
-@media screen and (min-width: 768px){
-
-}
-
-
-
 @media screen and (min-width: 1200px){
+
+    .musica{
+        width: 14vw;
+        height: 14vw;  
+    }
    
 }
 
@@ -175,11 +195,12 @@ body>footer{
 .debug .recently,
 .debug .john-doe,
 .debug .artisti{
-    height: 600px;
+    height: 1000px;
 }
 
 .debug .musica{
     background-color: white;
+    border: 1px solid black;
 }
 
 .debug .recently{
