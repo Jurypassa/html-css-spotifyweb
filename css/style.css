@@ -15,10 +15,13 @@ body{
 
 .menù{
     width: 40px;
-    height: calc(100vh - 70px);
+    height: calc(100% - 70px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
 
 }
 
@@ -31,10 +34,14 @@ body{
 }
 
 .menù .playlist{
-    min-height: 300px;
+    min-height: 100px;
 }
 
 /**** sezione audio ****/
+
+.audio{
+    margin-left: 40px;
+}
 
 .audio,
 .audio header{
@@ -52,6 +59,25 @@ body{
 .audio main{
     height: calc(100vh - 140px);
     margin-top: 70px;
+
+}
+
+.recently,
+.john-doe,
+.artisti{
+    display: flex;
+    padding: 20px 15px;
+}
+
+.recently{
+    flex-wrap: wrap;
+}
+
+.musica{
+    margin: 5px;
+    width: 38vw;
+    height: 38vw;
+    
 }
 
 /**** sezione footer ****/
@@ -62,26 +88,42 @@ body>footer{
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 100;
 }
 
+
+
 @media screen and (min-width: 420px){
+    
+    .menù{
+        width: 150px;
+    }
+
+    .audio{
+        margin-left: 150px;
+    }
+
     .audio,
     .audio header{
         width: calc(100vw - 150px);
     }
 
-    .menù{
-        width: 150px;
-    }
 }
+
+
 
 @media screen and (min-width: 768px){
 
 }
 
+
+
 @media screen and (min-width: 1200px){
    
 }
+
+
+
 /**** debug ****/
 
 .debug>footer{
@@ -90,14 +132,6 @@ body>footer{
 
 .debug .menù{
     background-color: blue;
-}
-
-.debug .audio header{
-    background-color: blueviolet;
-}
-
-.debug .audio main{
-    background-color: green;
 }
 
 .debug .menù header,
@@ -123,5 +157,39 @@ body>footer{
 .debug .menù footer{
     height: 70px;
     background-color: cyan;
+}
 
+.debug .audio header{
+    background-color: blueviolet;
+}
+
+.debug .audio main{
+    background-color: green;
+}
+
+.debug main nav{
+    height: 50px;
+    background-color: coral;
+}
+
+.debug .recently,
+.debug .john-doe,
+.debug .artisti{
+    height: 600px;
+}
+
+.debug .musica{
+    background-color: white;
+}
+
+.debug .recently{
+    background-color: darkorange;
+}
+
+.debug .john-doe{
+    background-color: darkgreen;
+}
+
+.debug .artisti{
+    background-color: deeppink;
 }
