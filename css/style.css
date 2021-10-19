@@ -17,20 +17,21 @@ body{
     width: 40px;
     height: calc(100vh - 70px);
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
 .menù header{
     height: 70px;
 }
 
-.menù .playlist{
-    min-height: 300px;
+.menù main{
+    height: calc(100vh - 210px);
 }
 
-.menù footer{
-    display: flex;
-    align-self: flex-end
+.menù .playlist{
+    min-height: 300px;
 }
 
 /**** sezione audio ****/
@@ -116,7 +117,6 @@ body>footer{
 }
 
 .debug .menù .playlist{
-    height: 300px;
     background-color: crimson;
 }
 
