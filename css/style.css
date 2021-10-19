@@ -11,28 +11,76 @@ body{
     flex-wrap: wrap;
 }
 
+/**** sezione menù ****/
+
 .menù{
-    width: 20%;
-    height: calc(100vh - 100px);
+    width: 40px;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.audio{
-    width: 80%;
+.menù header{
+    height: 70px;
+}
+
+.menù .playlist{
+    min-height: 300px;
+}
+
+.menù footer{
+    display: flex;
+    align-self: flex-end
+}
+
+/**** sezione audio ****/
+
+.audio,
+.audio header{
+    width: calc(100vw - 40px);
 }
 
 .audio header{
-    height: 100px;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
 }
 
 .audio main{
-    height: calc(100vh - 200px);
+    height: calc(100vh - 140px);
+    margin-top: 70px;
 }
 
-body footer{
+/**** sezione footer ****/
+
+body>footer{
     width: 100%;
-    height: 100px;
+    height: 70px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
+@media screen and (min-width: 420px){
+    .audio,
+    .audio header{
+        width: calc(100vw - 150px);
+    }
+
+    .menù{
+        width: 150px;
+    }
+}
+
+@media screen and (min-width: 768px){
+
+}
+
+@media screen and (min-width: 1200px){
+   
+}
 /**** debug ****/
 
 .debug>footer{
@@ -43,11 +91,37 @@ body footer{
     background-color: blue;
 }
 
-
 .debug .audio header{
     background-color: blueviolet;
 }
 
 .debug .audio main{
     background-color: green;
+}
+
+.debug .menù header,
+.debug .menù .home,
+.debug .menù .playlist,
+.debug .menù footer{
+    width: 90%;
+}
+
+.debug .menù header{
+    background-color: chocolate;
+}
+
+.debug .menù .home{
+    height: 100px;
+    background-color: cornflowerblue;
+}
+
+.debug .menù .playlist{
+    height: 300px;
+    background-color: crimson;
+}
+
+.debug .menù footer{
+    height: 70px;
+    background-color: cyan;
+
 }
