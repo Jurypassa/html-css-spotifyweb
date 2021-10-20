@@ -9,46 +9,76 @@
 body{
     display: flex;
     flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.white{
+    color: white;
 }
 
 /**** sezione menù ****/
 
 .menù{
     width: 40px;
+    height: calc(100vh - 70px);
+    text-align: center;
+    background-color: black;
+    color: #6d6d6d;
+}
+
+.menù .top{
     height: calc(100% - 70px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-
 }
 
-.menù header{
+.menù img{
+    width: 25px;
+    margin-top: 5px;
+}
+
+.menù span,
+.menù h1,
+.menù .playlist i{
+    display: none;
+}
+
+.menù .playlist span:nth-child(2){
+    min-height: 250px;
+    overflow-y: auto;
+}
+
+.menù .bottom{
     height: 70px;
+    background-color: black;
 }
 
-.menù main{
-    height: calc(100vh - 210px);
+.menù .bottom img:first-child{
+    width: 15px;
 }
 
-.menù .playlist{
-    min-height: 100px;
+.menù .bottom div:last-child img{
+    width: 20px;
+    border: 1px none #a3a3a3;
+    background-color: #a3a3a3;
+    border-radius: 50%;
+}
+
+.menù div{
+    display: block;
 }
 
 /**** sezione audio ****/
 
 .audio{
-    margin-left: 40px;
+    width: calc(100% - 40px);
+    overflow-y: auto;
 }
 
 /* .audio, */
-.audio header{
+.audio .upgrade{
     width: calc(100vw - 40px);
 }
 
-.audio header{
+.audio .upgrade{
     height: 70px;
     position: fixed;
     top: 0;
@@ -59,27 +89,19 @@ body{
 .audio main{
     height: calc(100vh - 140px);
     margin-top: 70px;
-
 }
 
 .recently,
 .john-doe,
 .artisti{
-    /* display: flex; */
     padding: 20px 15px;
-}
-
-.recently{
-    /* flex-wrap: wrap; */
-    display: table;
-    content: "";
-    clear: both;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .musica{
     width: 41vw;
     height: 41vw; 
-    float: left; 
 }
 
 /**** sezione footer ****/
@@ -93,31 +115,119 @@ body>footer{
     z-index: 100;
 }
 
-
-
 @media screen and (min-width: 576px){
-    
+
+    /* media menù */
     .menù{
         width: 150px;
+        text-align: left;
+        padding-left: 15px;
+        padding-top: 10px;
     }
 
+    .menù span,
+    .menù h1,
+    .menù .playlist i{
+        display: initial;
+    }
+
+    .menù span{
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .menù .logo img{
+        width: 35px;
+        vertical-align: top;
+    }
+
+    .menù .logo h1{
+        line-height: 35px;
+    }
+
+    .menù .logo div{
+        height: 35px;
+        margin-bottom: 25px;
+        color: white;
+    }
+
+    .menù .home div,
+    .menù .autore div{
+        line-height: 25px;
+        margin-bottom: 5px;
+    }
+
+    .menù .home img,
+    .menù .autore img{
+        vertical-align: middle;
+    }
+
+    .menù .home span,
+    .menù .autore span{
+        line-height: 25px;
+    }
+
+    .menù .installa img{
+        width: 15px;
+        vertical-align: top;
+    }
+
+    .menù .installa span{
+        line-height: 15px;
+    }
+
+    .menù .installa div{
+        height: 15px;
+    }
+
+    .menù .bottom{
+        padding-top: 15px;
+    }
+
+    .menù .bottom div:first-child{
+        border-bottom: 1px solid #a3a3a3;
+        width: 90%;
+    }
+
+
+    .menù .playlist i{
+        border: 1px solid #a3a3a3;
+        background-color: #a3a3a3;
+        color: black;
+        padding: 5px;
+    }
+
+    .menù .playlist div{
+        padding: 15px 0;
+    }
+
+    .menù .playlist ul li{
+        list-style: none;
+        padding: 5px 0;
+    }
+
+
+
+
+    /* media audio */
     .audio{
-        margin-left: 150px;
+        width: calc(100% - 150px);
     }
 
     .recently{
         width: calc(100vw - 150px);
     }
 
-    /* .audio, */
-    .audio header{
-        width: calc(100vw - 150px);
+    .audio .upgrade{
+        width: calc(100% - 150px);
     }
 
     .musica{
         width: 32vw;
         height: 32vw;  
     }
+
+
 
 }
 
@@ -150,60 +260,70 @@ body>footer{
     background-color: red;
 }
 
-.debug .menù{
+/* .debug .menù{
     background-color: blue;
-}
+} */
 
-.debug .menù header,
+/* .debug .menù .logo,
 .debug .menù .home,
 .debug .menù .playlist,
-.debug .menù footer{
+.debug .menù .autore{
     width: 90%;
-}
+} */
 
-.debug .menù header{
+/* .debug .menù .top{
+    background-color: chartreuse;
+} */
+
+/* .debug .menù .bottom{
     background-color: chocolate;
-}
+    height: 70px;
+} */
 
-.debug .menù .home{
+/* .debug .menù .logo{
+    background-color: chocolate;
+    height: 70px;                                                 
+} */
+
+/* .debug .menù .home{
     height: 100px;
     background-color: cornflowerblue;
-}
+} */
 
-.debug .menù .playlist{
+/* .debug .menù .playlist{
     background-color: crimson;
-}
+    height: 200px;
+} */
 
-.debug .menù footer{
-    height: 70px;
+/* .debug .menù .bottom{
     background-color: cyan;
-}
+} */
 
-.debug .audio header{
+.debug .audio .upgrade{
     background-color: blueviolet;
 }
 
-.debug .audio main{
+/* .debug .audio main{
     background-color: green;
-}
+} */
 
 .debug main nav{
     height: 50px;
     background-color: coral;
 }
 
-.debug .recently,
+/* .debug .recently,
 .debug .john-doe,
 .debug .artisti{
     height: 1000px;
-}
+} */
 
 .debug .musica{
     background-color: white;
     border: 1px solid black;
 }
 
-.debug .recently{
+/* .debug .recently{
     background-color: darkorange;
 }
 
@@ -213,4 +333,4 @@ body>footer{
 
 .debug .artisti{
     background-color: deeppink;
-}
+} */
