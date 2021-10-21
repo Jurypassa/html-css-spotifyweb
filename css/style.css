@@ -14,20 +14,31 @@ body{
 
 .white{
     color: white;
+    font-weight: bold;
+}
+
+.gray{
+    color: #7d7f84;
+    font-weight: bold;
+}
+
+.small{
+    font-size: 12px;
 }
 
 /**** sezione menù ****/
 
 .menù{
+    min-height: 350px;
     width: 40px;
     height: calc(100vh - 70px);
     text-align: center;
     background-color: black;
-    color: #6d6d6d;
 }
 
 .menù .top{
     height: calc(100% - 70px);
+    overflow-y: hidden;
 }
 
 .menù img{
@@ -66,6 +77,7 @@ body{
 .audio{
     width: calc(100% - 40px);
     overflow-y: auto;
+    background-color: #141922;
 }
 
 /* .audio, */
@@ -99,6 +111,19 @@ body{
     margin-top: 70px;
 }
 
+.audio nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.audio nav li{
+    list-style: none;
+    text-transform: uppercase;
+    padding: 15px 10px;
+    font-size: 14px;
+}
+
 .recently,
 .john-doe,
 .artisti{
@@ -107,10 +132,40 @@ body{
     flex-wrap: wrap;
 }
 
-.musica{
-    width: 41vw;
-    height: 41vw;
+.audio .titolo{
+    width: 100%;
+    padding-bottom: 20px;
 }
+
+.audio .titolo p{
+    padding-top: 10px;
+}
+
+
+.musica{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 41vw;
+}
+
+.audio .musica>*{
+    display: block;
+}
+
+
+.audio .musica img{
+    width: 41vw;
+}
+
+.audio .artisti img{
+    border-radius: 50%;
+}
+
+.audio .musica span{
+    padding-top: 10px;
+    text-align: center;
+}
+
 
 /**** sezione footer ****/
 
@@ -127,8 +182,10 @@ body>footer{
 
     /* media menù */
     .menù{
-        width: 150px;
+        width: 200px;
         text-align: left;
+        padding-left: 15px;
+        padding-top: 10px;
     }
 
     .menù span,
@@ -183,6 +240,7 @@ body>footer{
         width: 100%;
         overflow: auto;
         display: inline-block;
+        max-height: 150px;
     }
 
     .menù .installa img{
@@ -226,23 +284,28 @@ body>footer{
 
     /* media audio */
     .audio{
-        width: calc(100% - 150px);
+        width: calc(100% - 200px);
     }
 
     .recently{
-        width: calc(100vw - 150px);
+        width: calc(100vw - 200px);
     }
 
     .audio .upgrade{
-        width: calc(100% - 150px);
+        width: calc(100% - 200px);
+    }
+
+    .audio nav li{
+        padding: 15px 15px;
     }
 
     .musica{
-        width: 32vw;
-        height: 32vw;
+        width: 28vw;
     }
 
-
+    .audio .musica img{
+        width: 28vw;
+    }
 
 }
 
@@ -250,8 +313,11 @@ body>footer{
 @media screen and (min-width: 768px){
 
     .musica{
-        width: 19vw;
-        height: 19vw;
+        width: 16vw;
+    }
+
+    .audio .musica img{
+        width: 16vw;
     }
 
 }
@@ -261,8 +327,11 @@ body>footer{
 @media screen and (min-width: 1200px){
 
     .musica{
-        width: 14vw;
-        height: 14vw;
+        width: 12vw;
+    }
+
+    .audio .musica img{
+        width: 12vw;
     }
 
 }
@@ -321,11 +390,11 @@ body>footer{
 /* .debug .audio main{
     background-color: green;
 } */
-
+/* 
 .debug main nav{
     height: 50px;
     background-color: coral;
-}
+} */
 
 /* .debug .recently,
 .debug .john-doe,
@@ -333,10 +402,10 @@ body>footer{
     height: 1000px;
 } */
 
-.debug .musica{
+/* .debug .musica{
     background-color: white;
     border: 1px solid black;
-}
+} */
 
 /* .debug .recently{
     background-color: darkorange;
