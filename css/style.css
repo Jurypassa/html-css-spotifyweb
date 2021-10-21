@@ -76,18 +76,21 @@ body{
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 999;
+    z-index: 2;
 }
 
 .audio .upgrade span{
     text-transform: uppercase;
-    text-align: right;
     color: white;
     border: 1px solid white;
     border-radius: 50px;
     padding: 10px 30px;
     font-size: 12px;
     font-weight: bold;
+    position: fixed;
+    top: 12px;
+    right: 5px;
+    z-index: 3;
 }
 
 
@@ -106,7 +109,7 @@ body{
 
 .musica{
     width: 41vw;
-    height: 41vw; 
+    height: 41vw;
 }
 
 /**** sezione footer ****/
@@ -117,7 +120,7 @@ body>footer{
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1;
 }
 
 @media screen and (min-width: 576px){
@@ -126,8 +129,6 @@ body>footer{
     .menù{
         width: 150px;
         text-align: left;
-        padding-left: 15px;
-        padding-top: 10px;
     }
 
     .menù span,
@@ -172,9 +173,16 @@ body>footer{
         line-height: 25px;
     }
 
+    .menù .playlist{
+        height: 60%;
+        overflow-y: hidden;
+    }
+
     .menù .playlist .lista{
-        max-height: 150px;
+        height: 100%;
+        width: 100%;
         overflow: auto;
+        display: inline-block;
     }
 
     .menù .installa img{
@@ -231,7 +239,7 @@ body>footer{
 
     .musica{
         width: 32vw;
-        height: 32vw;  
+        height: 32vw;
     }
 
 
@@ -243,7 +251,7 @@ body>footer{
 
     .musica{
         width: 19vw;
-        height: 19vw;  
+        height: 19vw;
     }
 
 }
@@ -254,9 +262,9 @@ body>footer{
 
     .musica{
         width: 14vw;
-        height: 14vw;  
+        height: 14vw;
     }
-   
+
 }
 
 
@@ -289,7 +297,7 @@ body>footer{
 
 /* .debug .menù .logo{
     background-color: chocolate;
-    height: 70px;                                                 
+    height: 70px;
 } */
 
 /* .debug .menù .home{
@@ -301,8 +309,8 @@ body>footer{
     background-color: crimson;
     height: 200px;
 } */
-
-/* .debug .menù .bottom{
+/* 
+.debug .menù .bottom{
     background-color: cyan;
 } */
 
