@@ -34,6 +34,7 @@ body{
     height: calc(100vh - 70px);
     text-align: center;
     background-color: black;
+    padding-top: 10px;
 }
 
 .menù .top{
@@ -43,7 +44,6 @@ body{
 
 .menù img{
     width: 25px;
-    margin-top: 5px;
 }
 
 .menù span,
@@ -70,6 +70,15 @@ body{
 
 .menù div{
     display: block;
+}
+
+.menù .home span:hover,
+.menù .playlist div:first-child:hover,
+.menù .lista li:hover,
+.menù .bottom:hover,
+footer .brano .gray:hover{
+    color: white;
+    cursor: pointer;
 }
 
 /**** sezione audio ****/
@@ -105,6 +114,12 @@ body{
     z-index: 3;
 }
 
+.audio .upgrade span:hover{
+    font-size: 14px;
+    padding: 15px 35px;
+    cursor: pointer;
+}
+
 
 .audio main{
     height: calc(100vh - 140px);
@@ -122,6 +137,11 @@ body{
     text-transform: uppercase;
     padding: 15px 10px;
     font-size: 14px;
+}
+
+.audio nav li:hover{
+    color: white;
+    cursor: pointer;
 }
 
 .recently,
@@ -155,6 +175,41 @@ body{
 
 .audio .musica img{
     width: 41vw;
+}
+
+.container{
+    position: relative;
+}
+
+.container:hover .overlay{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;  
+}
+
+.svg{
+    color: white;
+    font-size: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.audio .artisti .overlay{
+    border-radius: 50%;
 }
 
 .audio .artisti img{
@@ -208,6 +263,11 @@ footer .play{
     flex-grow: 2;
 }
 
+footer .row-1 i:nth-child(3):hover{
+    font-size: 34px;
+    cursor: pointer;
+}
+
 footer .row-1,
 footer .row-2{
     height: 50%;
@@ -229,6 +289,13 @@ footer .row-2 div:nth-child(2){
     border: 2px solid gray;
     border-radius: 5px 0 5px 5px;
     margin-left: 15px;
+}
+
+footer .row-2 div:nth-child(2):hover,
+footer .volume div:nth-child(4):hover{
+    
+    border: 2px solid greenyellow;
+    cursor: pointer;
 }
 
 footer .row-2 div:nth-child(3){
@@ -262,6 +329,10 @@ footer .volume>*{
     padding-right: 10px;
 }
 
+
+
+
+
 @media screen and (min-width: 576px){
 
     /* media menù */
@@ -269,7 +340,6 @@ footer .volume>*{
         width: 200px;
         text-align: left;
         padding-left: 15px;
-        padding-top: 10px;
     }
 
     .menù span,
@@ -314,6 +384,11 @@ footer .volume>*{
         line-height: 25px;
     }
 
+    .menù .playlist>*:not(.lista):hover{
+        color: white;
+        cursor: pointer;
+    }
+
     .menù .playlist{
         height: 60%;
         overflow-y: hidden;
@@ -326,29 +401,6 @@ footer .volume>*{
         display: inline-block;
         max-height: 150px;
     }
-
-    .menù .installa img{
-        width: 15px;
-        vertical-align: top;
-    }
-
-    .menù .installa span{
-        line-height: 15px;
-    }
-
-    .menù .installa div{
-        height: 15px;
-    }
-
-    .menù .bottom{
-        padding-top: 15px;
-    }
-
-    .menù .bottom div:first-child{
-        border-bottom: 1px solid #a3a3a3;
-        width: 90%;
-    }
-
 
     .menù .playlist i{
         border: 1px solid #a3a3a3;
@@ -365,6 +417,29 @@ footer .volume>*{
         list-style: none;
         padding: 5px 0;
     }
+
+    .menù .bottom{
+        padding-top: 15px;
+    }
+
+    .menù .installa img{
+        width: 15px;
+        vertical-align: middle;
+    }
+
+    .menù .installa{
+        height: 15px;
+        line-height: 15px;
+    }
+    
+    .menù .autore{
+        padding-top: 5px;
+        border-top: 1px solid #a3a3a3;
+        width: 90%;
+    }
+
+
+
 
     /* media audio */
     .audio{
@@ -389,6 +464,10 @@ footer .volume>*{
 
     .audio .musica img{
         width: 28vw;
+    }
+
+    .svg{
+        font-size: 50px;
     }
 
 }
